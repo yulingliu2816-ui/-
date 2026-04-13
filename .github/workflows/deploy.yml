@@ -33,8 +33,8 @@ jobs:
       - name: Install dependencies
         run: npm install --include=optional
 
-      - name: Rebuild native dependencies
-        run: npm rebuild
+      - name: Install Tailwind Linux binary explicitly
+        run: npm install @tailwindcss/oxide-linux-x64-gnu --no-save
 
       - name: Build
         run: npm run build
